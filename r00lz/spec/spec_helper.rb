@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require "r00lz"
 
 RSpec.configure do |config|
