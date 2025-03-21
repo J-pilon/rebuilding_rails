@@ -1,0 +1,24 @@
+PATH
+  remote: ../r00lz
+  specs:
+    r00lz (0.1.0)
+      rack (~> 2.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    nio4r (2.7.4)
+    puma (6.6.0)
+      nio4r (~> 2.0)
+    rack (2.2.13)
+
+PLATFORMS
+  arm64-darwin-21
+  arm64-darwin-23
+
+DEPENDENCIES
+  puma
+  r00lz!
+
+BUNDLED WITH
+   2.4.10

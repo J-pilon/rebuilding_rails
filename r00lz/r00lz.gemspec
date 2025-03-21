@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative "lib/r00lz/version"
 
 Gem::Specification.new do |spec|
@@ -13,8 +11,6 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/J-pilon/rebuilding_rails"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
-
-  spec.metadata["allowed_push_host"] = "https://example.com"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/J-pilon/rebuilding_rails"
@@ -30,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "rack", "~> 2.0.7"
+  spec.add_runtime_dependency "rack", "~>2.2"
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"

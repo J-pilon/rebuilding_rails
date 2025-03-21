@@ -1,6 +1,2 @@
-run proc {
-  [ 200,
-    { 'content-type' => 'text/html' },
-    ["hello, web!"]
-  ]
-}
+require_relative 'config/app'
+run Quotes::App.new
