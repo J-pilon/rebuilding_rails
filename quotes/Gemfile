@@ -2,3 +2,4 @@ source "https://rubygems.org"
 gem "r00lz", path: "../r00lz"
 
 gem 'puma'
+gem "debug", ">= 1.0.0"

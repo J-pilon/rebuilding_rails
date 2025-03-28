@@ -1,4 +1,5 @@
-require_relative "r00lz/version"
+require_relative 'r00lz/version'
+require 'debug'
 
 # TODO: step through the logic of this code
 
