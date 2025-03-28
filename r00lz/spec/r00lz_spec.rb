@@ -15,4 +15,15 @@ RSpec.describe R00lz do
 
     expect(::R00lz::App.new.call(env)[0]).to be(200)
   end
+
+  it "autoloads a controller" do
+    $LOAD_PATH << "#{__dir__}/mocks"
+
+    env = {
+      "PATH_INFO" => "/foo/bar",
+      "QUERY_STRING" => ""
+    }
+
+    expect(::R00lz::App.new.call(env)[0]).to be(200)
+  end
 end
