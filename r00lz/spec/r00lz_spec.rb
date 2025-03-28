@@ -16,6 +16,15 @@ RSpec.describe R00lz do
     expect(::R00lz::App.new.call(env)[0]).to be(200)
   end
 
+  it "request returns params" do
+    env = {
+      "PATH_INFO" => "/ted/think",
+      "QUERY_STRING" => "automobile=car"
+    }
+
+    expect(::R00lz::Controller.new(env).request.params).to include("automobile" => "car")
+  end
+
   it "autoloads a controller" do
     $LOAD_PATH << "#{__dir__}/mocks"
 
