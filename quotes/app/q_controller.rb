@@ -12,4 +12,9 @@ class QController < R00lz::Controller
     n = params["card"] || "Queen"
     "Your card: the #{n} of spades!"
   end
+
+  def fq
+    @q = FileModel.find(params["q"] || 1)
+    render :quote
+  end
 end

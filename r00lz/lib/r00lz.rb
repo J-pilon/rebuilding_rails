@@ -56,10 +56,27 @@ module R00lz
   end
 end
 
+class FileModel
+  def initialize(fn)
+    @fn = fn
+    cont = File.read(@fn)
+    @hash = JSON.load(cont)
+  end
+
+  def [](field)
+    @hash[field.to_s]
+  end
+
+  def self.find(id)
+    self.new("data/#{id}.json")
+  rescue => e
+    puts "Error: #{e}"
+    nil
+  end
+end
 
 class Object
   def self.const_missing(c)
-    puts R00lz.to_underscore(c.to_s)
     require R00lz.to_underscore(c.to_s)
     Object.const_get(c)
   end
