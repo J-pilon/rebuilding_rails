@@ -69,7 +69,8 @@ class FileModel
 
   def self.find(id)
     self.new("data/#{id}.json")
-  rescue
+  rescue => e
+    puts "Error: #{e}"
     nil
   end
 end
