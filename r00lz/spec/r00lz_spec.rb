@@ -35,4 +35,13 @@ RSpec.describe R00lz do
 
     expect(::R00lz::App.new.call(env)[0]).to be(200)
   end
+
+  it "loads a model successfully" do
+    env = {
+      "PATH_INFO" => "/foo/my_model",
+      "QUERY_STRING" => ""
+    }
+
+    expect(::R00lz::App.new.call(env)[2]).to include("Foo")
+  end
 end
